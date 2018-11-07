@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var Square =function (){
+        this.name ='Jane';
+        this.age =12;
+    };
+    Square.prototype.typeAge =function(){
+        alert(this.age )
+    };
+
+    var Square1=function  (){
+      Square.call(this);
+        console.log(this.name);
+    };
+    Square1.prototype = Square.prototype;
+
+var s =new Square1();
+    s.typeAge();
+    console.log(s);
+    console.log(Square1);
+</script>
+</body>
+</html>

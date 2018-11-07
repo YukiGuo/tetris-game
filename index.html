@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>俄罗斯方块小游戏仿制</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #ccc;
+        }
+        #wrapper{
+            position: relative;
+            width: 414px;
+            background-color: #c2b5ac;
+            margin: 50px auto 0 auto;
+        }
+        .direction{
+            position: absolute;
+            bottom:-50px;
+
+        }
+        .section{
+            width: 370px;
+            height: 440px;
+            padding:20px;
+            margin: 20px auto 0 auto;
+            border: solid #fff 2px;
+            border-radius: 1%
+        }
+        #game{
+            position: relative;
+            float: left;
+            width:200px;
+            height: 440px;
+            background-color: #f0dae3;
+        }
+        .slide{
+            float: left;
+            margin-left: 20px;
+            width:150px;
+            height: 440px;
+            background-color: #69646a;
+        }
+        .nextDiv{
+            position: relative;
+            width: 80px;
+            height:80px;
+            border: solid 2px #fff;
+            margin: 20px 25px 20px 25px;
+
+        }
+        .slide p{
+            line-height: 40px;
+            margin-left: 25px;
+            color: #fff;
+        }
+        .current, .none, .done {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            box-sizing: border-box;
+        }
+        .current{
+            background-color: rgba(54, 174, 94, 0.84);
+            border:  rgb(254, 253, 237) 1px solid;
+        }
+        .none{
+            background-color: #f0dae3;;
+        }
+        .done{
+            background-color: rgba(170, 153, 201, 0.98);
+            border: solid rgb(254, 253, 237) 1px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div class="section">
+       <div id="game"></div>
+       <div class="slide">
+           <div class = "nextDiv"></div>
+           <p class="line">Lines: 0</p>
+           <p class="score">Scores: 0</p>
+           <p class="time">Times: 0 s</p>
+       </div>
+    </div>
+    <div class="direction">
+        <h4>AWSD键进行移动和翻转。</br>A:左移，D:右移，W:翻转，S:下落</h4>
+    </div>
+</div>
+<script  src="square.js" ></script>
+<script  src="game.js"></script>
+<script  src="index.js" ></script>
+</body>
+</html>
